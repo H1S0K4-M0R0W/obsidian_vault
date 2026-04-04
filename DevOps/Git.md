@@ -1,4 +1,5 @@
 #basis
-# Список ссылок
-1. GitHub
-2. GitLab
+# Lists
+
+1. [[GitHub]]
+2. [[GitLab]]

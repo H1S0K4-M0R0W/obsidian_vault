@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"c72b4b0a58bca743","type":"text","text":"","x":-220,"y":-30,"width":345,"height":350,"color":"6"},
+		{"id":"b4510e4374bc2470","type":"text","text":"Version DataBase","x":-172,"y":85,"width":250,"height":195,"color":"5"},
+		{"id":"c3d4fae2753c18d5","type":"text","text":"","x":-700,"y":-30,"width":345,"height":350,"color":"6"},
+		{"id":"910fad240d749774","type":"text","text":"Computer 1","x":-652,"y":0,"width":250,"height":60,"color":"3"},
+		{"id":"e243a49d7aafec15","type":"text","text":"Version DataBase","x":-652,"y":85,"width":250,"height":195,"color":"5"},
+		{"id":"37b7c01c7cf045ba","type":"text","text":"","x":300,"y":-30,"width":345,"height":350,"color":"6"},
+		{"id":"9c2cccffabe5ba43","type":"text","text":"Computer 3","x":348,"y":0,"width":250,"height":60,"color":"3"},
+		{"id":"441cad05be668684","type":"text","text":"Version DataBase","x":348,"y":85,"width":250,"height":195,"color":"5"},
+		{"id":"9e8e502d9ab91d9e","type":"text","text":"Computer 2","x":-172,"y":0,"width":250,"height":60,"color":"3"},
+		{"id":"d73845f7975df8e0","type":"text","text":"File 2","x":422,"y":153,"width":102,"height":60,"color":"1"},
+		{"id":"f40e54ed2968eb43","type":"text","text":"File 3","x":-98,"y":153,"width":102,"height":60,"color":"1"},
+		{"id":"d3bcdfa26a3b8e89","type":"text","text":"File 1","x":-578,"y":145,"width":102,"height":60,"color":"1"},
+		{"id":"ab14e1c112d9bd60","type":"text","text":"","x":-220,"y":-600,"width":345,"height":350,"color":"6"},
+		{"id":"88bff520e33a1f63","type":"text","text":"Server","x":-172,"y":-568,"width":250,"height":60,"color":"4"},
+		{"id":"b1fb33e0935de422","type":"text","text":"Version DataBase","x":-172,"y":-493,"width":250,"height":195,"color":"5"},
+		{"id":"bdc328dcabae9a9a","type":"text","text":"File 1","x":-150,"y":-448,"width":102,"height":60,"color":"1"},
+		{"id":"ef89da9debafd0c6","type":"text","text":"File 3","x":-150,"y":-388,"width":102,"height":60,"color":"1"},
+		{"id":"b9b8ea01e679dd4f","type":"text","text":"File 2","x":-48,"y":-448,"width":102,"height":60,"color":"1"},
+		{"id":"29896fcf58493539","type":"text","text":"File 2","x":347,"y":-228,"width":102,"height":60,"color":"1"},
+		{"id":"1d0312ecca40760b","type":"text","text":"File 1","x":-505,"y":-238,"width":102,"height":60,"color":"1"},
+		{"id":"db2f182a71685d0a","type":"text","text":"File 3","x":-99,"y":-178,"width":102,"height":60,"color":"1"},
+		{"id":"ed687b1506628998","type":"text","text":"\t`Distributed VCS`","x":-173,"y":-720,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"41528afac1b03f8e","fromNode":"37b7c01c7cf045ba","fromSide":"top","toNode":"ab14e1c112d9bd60","toSide":"right"},
+		{"id":"1d0ee74b99048a7a","fromNode":"ab14e1c112d9bd60","fromSide":"left","toNode":"c3d4fae2753c18d5","toSide":"top"},
+		{"id":"75e88c77beaa84f3","fromNode":"c3d4fae2753c18d5","fromSide":"right","toNode":"c72b4b0a58bca743","toSide":"left"},
+		{"id":"4ac6931558353b56","fromNode":"c72b4b0a58bca743","fromSide":"right","toNode":"37b7c01c7cf045ba","toSide":"left"},
+		{"id":"fca11a75e3853949","fromNode":"c3d4fae2753c18d5","fromSide":"top","toNode":"ab14e1c112d9bd60","toSide":"left"},
+		{"id":"565ab53bbf284d86","fromNode":"37b7c01c7cf045ba","fromSide":"top","toNode":"ab14e1c112d9bd60","toSide":"right"},
+		{"id":"9ba7e69c0cb2c0e4","fromNode":"ab14e1c112d9bd60","fromSide":"right","toNode":"37b7c01c7cf045ba","toSide":"top"},
+		{"id":"e47c351237912aa5","fromNode":"c72b4b0a58bca743","fromSide":"left","toNode":"c3d4fae2753c18d5","toSide":"right"},
+		{"id":"f4886cfd1bd24861","fromNode":"c72b4b0a58bca743","fromSide":"right","toNode":"37b7c01c7cf045ba","toSide":"left"},
+		{"id":"86d448ab10125e0c","fromNode":"37b7c01c7cf045ba","fromSide":"left","toNode":"c72b4b0a58bca743","toSide":"right"},
+		{"id":"2f758620caaa4bf1","fromNode":"c72b4b0a58bca743","fromSide":"top","toNode":"b1fb33e0935de422","toSide":"bottom"},
+		{"id":"048c759cdb3d260a","fromNode":"ab14e1c112d9bd60","fromSide":"bottom","toNode":"c72b4b0a58bca743","toSide":"top"},
+		{"id":"28287d82b5e6ee0e","fromNode":"c72b4b0a58bca743","fromSide":"top","toNode":"ab14e1c112d9bd60","toSide":"bottom"}
+	]
+}
