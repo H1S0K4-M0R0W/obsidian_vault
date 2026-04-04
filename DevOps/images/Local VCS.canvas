@@ -6,7 +6,7 @@
 		{"id":"12f15e29d403e65e","type":"text","text":"Version 4","x":-205,"y":40,"width":250,"height":60,"color":"1"},
 		{"id":"61c932ac07ad9967","type":"text","text":"<center> <b><h1>FILE\n</center>","x":-420,"y":-160,"width":125,"height":90,"color":"4"},
 		{"id":"b9257cd396db14d8","type":"text","text":"\tLocal Computer","x":-220,"y":-380,"width":215,"height":60},
-		{"id":"1c2e7812a6e19203","type":"text","text":"<center><h1>Git</center>\n\n~~ ~~ ~~~ ~ ~~ ~~~~~\n~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ~~~~~\n~~ ~~ ~~~ ~ ~~ ~~~~~\n~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ~~~~~\n~~ ~~ ~~~ ~ ~~ ~~~~~\n\n~~ ~~ ~~~ ~ ~~ ~~~~~\n~~ ~~ ~~~ ~ ~~ ~~~~~~~ ~~ ~~~ ~ ~~ ","x":-60,"y":-300,"width":240,"height":420}
+		{"id":"1c2e7812a6e19203","type":"text","text":"<center><h1>VCS</center>\n\n","x":-60,"y":-300,"width":240,"height":420}
 	],
 	"edges":[
 		{"id":"a6748109f8ac6ad0","fromNode":"61c932ac07ad9967","fromSide":"right","toNode":"ecb0b78e8f9b29f0","toSide":"left"}
