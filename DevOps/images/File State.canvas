@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"9e36d8eed4372b56","type":"text","text":"<center><h1>Staged","x":-340,"y":-240,"width":250,"height":160,"color":"1"},
+		{"id":"180f4b581c8c8271","type":"text","text":"<center><h1>Unmodified","x":20,"y":-240,"width":250,"height":160,"color":"4"},
+		{"id":"88863290ab264398","type":"text","text":"<center><h1>Modified","x":380,"y":-240,"width":250,"height":160,"color":"2"},
+		{"id":"5473ad3839b09f56","x":-700,"y":-240,"width":250,"height":160,"color":"5","type":"text","text":"<center><h1>Untracked"},
+		{"id":"74dfc28c0f110851","type":"text","text":"<center><h1>Untracked","x":-700,"y":120,"width":250,"height":160,"color":"5"},
+		{"id":"36f837478c4e999a","type":"text","text":"<center><h1>Staged","x":-340,"y":280,"width":250,"height":160,"color":"1"}
+	],
+	"edges":[
+		{"id":"a1a4b8eb330262ca","fromNode":"5473ad3839b09f56","fromSide":"bottom","toNode":"9e36d8eed4372b56","toSide":"bottom","label":"git add"},
+		{"id":"245e8b38897e1f47","fromNode":"9e36d8eed4372b56","fromSide":"bottom","toNode":"180f4b581c8c8271","toSide":"bottom","label":"git commit"},
+		{"id":"a1fe8592f013f43b","fromNode":"180f4b581c8c8271","fromSide":"bottom","toNode":"88863290ab264398","toSide":"bottom","label":"edit"},
+		{"id":"d819a28b0bde28d6","fromNode":"88863290ab264398","fromSide":"bottom","toNode":"36f837478c4e999a","toSide":"right","label":"git add"},
+		{"id":"cb12cb6e87106f95","fromNode":"180f4b581c8c8271","fromSide":"bottom","toNode":"74dfc28c0f110851","toSide":"right","label":"remove"}
+	]
+}

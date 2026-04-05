@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"6d934f10c0af778c","x":-420,"y":-220,"width":250,"height":160,"color":"1","type":"text","text":"<center><h1>Рабочая директория</center>"},
+		{"id":"8a0e38517d4dd980","type":"text","text":"<center><h1>Индекс (Stage)</center>","x":-80,"y":-220,"width":250,"height":160,"color":"3"},
+		{"id":"711a84b0181ecee0","type":"text","text":"<center><h1>Рабочая директория</center>","x":260,"y":-220,"width":250,"height":160,"color":"4"},
+		{"id":"e6865118b8f07877","type":"text","text":"<center><h1>Рабочая директория</center>","x":280,"y":-200,"width":250,"height":160,"color":"4"},
+		{"id":"7d0ec2a69c4e6508","type":"text","text":"<center><h1>Репозиторий</center>","x":300,"y":-180,"width":250,"height":160,"color":"4"}
+	],
+	"edges":[
+		{"id":"54782ab4337d9e32","fromNode":"6d934f10c0af778c","fromSide":"right","toNode":"8a0e38517d4dd980","toSide":"left"},
+		{"id":"9b4859da31bc1ddf","fromNode":"8a0e38517d4dd980","fromSide":"right","toNode":"711a84b0181ecee0","toSide":"left"}
+	]
+}
