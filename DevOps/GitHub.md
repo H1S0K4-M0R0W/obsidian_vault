@@ -911,9 +911,190 @@ git shortlog --since="2012-01-01" --until="2012-12-31"
 | `%cr` | Относительная дата коммитера                                |
 | `%s`  | Содержание                                                  |
 
+---
+# - Изменение истории (`git reflog`) - `git reference log`
+
+> [!cite]  `git reflog` - `git reference log` - журнал операция `git`
+> В нём хранится:
+> 1. Перемещение `HEAD`
+> 2. Коммиты
+> 3. Слияние и удаление веток
+> 4. Изменение тегов
+> 
+
+Благодаря данной команде можно отменить действие команды `git reset --hard <UID>`, достаточно лишь написать `git reflog` и найти предыдущий `UID` коммита и проделать `git reset --hard <UID>` ещё раз
+
+Если Вы хотите отчистить накопившуюся историю действий, то стоит выполнить это:
+`git reflof expire --expire=7.days --all --verbose`
+- `expire` - очистка данных из `reflog`
+- `--expire=7.days` (истекает за 7 дней) - начиная с 7 дней назад
+- `--all` - данный параметр указывает что при очистке будет удалено всё, а именно:
+	1. `/refs/tags/*` - тэги
+	2. `/refs/heads/*` - ветки
+	3. `/refs/remote/*` - удаленное отслеживание
+	4. `HEAD` (текущая позиция)
+- `--verbose`(многословный) - подробное описание, что было удалено
+
+Также в `Git` есть и сборщик мусора, при очистке которого репозиторий уменьшает своё место на диске:
+
+`git gc --force` (`GC` - `Garbage Collector`) - очистить мусор
+
+``` shell
+# вывод reference log
+# отображает только локальную историю
+git reflog
+
+# перемещение в другой репозиторий и вывод аналогичной информации о нем
+cd ../hellogitworld
+pwd
+git reflog
+
+# Сценарий использования: Восстановление удаленного коммита
+# 
+git reflog
+git log --oneline
+git reset --hard HEAD~1
+git log --oneline
+git reflog
+git reset --hard 10f7044
+git log –oneline
+
+# Сценарий использования: Удаление старых записей
+# 
+git reflog
+git reflog expire --expire=7.days --all --verbose
+git reflog
+
+git reflog expire --expire=1.minutes --all –-verbose
+git reflog
+
+# запуск сборщика мусора Git
+git gc
+```
+
+---
+# - Игнорирование файлов (`.gitignore`)
+
+`# Блок 1`
+``` shell
+## простой пример
+# вернемся в каталог с репозиторием first_project
+cd ../first_project
+
+# создадим лог-файл
+touch events.log
+# проверим статус файлов
+git status
+# создадим файл для настроек игнора
+nano .gitignore
+# добавим в этот файл имя игнорируемого файла
+ events.log
+
+# снова проверим статус файлов
+git status
+# добавим все изменения в индекс
+git add .
+# снова проверим статус файлов
+git status
+
+# сделаем новый коммит
+git commit -m "add .gitignore file"
+# проверим список коммитов
+git log --oneline
 
 
+##	шаблоны (*, ?)
+# создадим еще пару файлов с логами
+touch events_123.log e_123123.log
+# проверим, что они появились
+ls
+# проверим гит-статус
+git status
+# откроем файл .gitignore, чтобы добавить в него новый шаблон
+nano .gitignore
+ *.log
 
+# снова проверим гит-статус
+git status
+# добавим все изменения в индекс
+git add .
+git status
+# добавим новые изменения в прошлый коммит
+git commit --amend --no-edit
+git status
+git log --oneline
+
+
+## игнор папки
+# создадим новую папку с указанным именем
+mkdir logs
+# переместим все файлы с расширением 'log' в эту папку
+mv *.log logs
+ls
+ls logs/
+git status
+# откроем файл .gitignore, чтобы добавить в него новый шаблон
+nano .gitignore
+  logs/*
+
+git status
+git add .
+git status
+git commit --amend --no-edit
+git log --oneline
+git status
+ls
+
+
+## отмена игнора (“!”)
+# 
+touch rare_critical_errors.log
+ls
+git status
+nano .gitignore
+  !rare_critical_errors.log
+
+git status
+git add .
+git status
+git commit --amend --no-edit
+git status
+git log –oneline
+git log --stat -1
+```
+
+`# Блок 2`
+``` shell
+## форсированное добавление
+## (это редкий сценарий)
+
+touch debug.log
+ls
+git status
+# принудительно добавляем в индекс файл debug.log
+git add -f debug.log
+git status
+git commit -m "force adding debug.log"
+git status
+git log --oneline
+
+
+## глобальные настройки
+# указываем глобальную настройку для пути к файлу .gitignore
+git config --global core.excludesfile ~/.gitignore_global
+# создаем сам файл по указанному пути
+touch ~/.gitignore_global
+nano ~/.gitignore_global
+  *.tmp
+
+ls
+git status
+# создаем тестовый файл (должен игнорироваться)
+touch tempfile.tmp
+git status
+```
+
+---
 
 
 
