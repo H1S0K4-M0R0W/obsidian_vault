@@ -1,5 +1,8 @@
 # Guacamole (guacd, postgresql, guacamole)
 
+> [!success] Важно! Для корректной работы *БД*
+> `docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > initdb.sql`
+
 ```yml
 version: '3.8'
 
